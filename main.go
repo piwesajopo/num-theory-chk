@@ -58,6 +58,20 @@ func handleArgs() (int, error) {
 	return n, nil
 }
 
+type evalKind func(n int) bool
+
+func testKind(kind string, number int, fn evalKind) {
+	if debug {
+		fmt.Printf("Finding if %d is a %s number.\n", number, kind)
+	}
+
+	if fn(number) {
+		fmt.Printf("%d IS a %s number.\n", number, kind)
+	} else {
+		fmt.Printf("%d IS NOT a %s number.\n", number, kind)
+	}
+}
+
 func main() {
 	number, err := handleArgs()
 	if err != nil {
@@ -78,26 +92,7 @@ func main() {
 			"is an deficient number with an deficiency of", number-sumOfProperDiv)
 	}
 
-	kind := "happy"
-	if debug {
-		fmt.Printf("Finding if %d is a %s number.\n", number, kind)
-	}
-
-	if happy(number) {
-		fmt.Printf("%d IS a %s number.\n", number, kind)
-	} else {
-		fmt.Printf("%d IS NOT a %s number.\n", number, kind)
-	}
-
-	kind = "self"
-	if debug {
-		fmt.Printf("Finding if %d is a %s number.\n", number, kind)
-	}
-
-	if self(number) {
-		fmt.Printf("%d IS a %s number.\n", number, kind)
-	} else {
-		fmt.Printf("%d IS NOT a %s number.\n", number, kind)
-	}
-
+	testKind("happy", number, happy)
+	testKind("self", number, self)
+	testKind("odious", number, odious)
 }
