@@ -64,6 +64,20 @@ func main() {
 		return
 	}
 
+	sumOfProperDiv := SumOfProperDivisors(number)
+	fmt.Println("Number", number, "has", NumberOfDivisors(number), "divisors.")
+	fmt.Println("Sum of proper divisors of", number, "is", sumOfProperDiv)
+
+	if number == sumOfProperDiv {
+		fmt.Println("Number", number, "is a perfect number")
+	} else if number < sumOfProperDiv {
+		fmt.Println("Number", number,
+			"is an abundant number with an abundance of", sumOfProperDiv-number)
+	} else {
+		fmt.Println("Number", number,
+			"is an deficient number with an deficiency of", number-sumOfProperDiv)
+	}
+
 	kind := "happy"
 	if debug {
 		fmt.Printf("Finding if %d is a %s number.\n", number, kind)
