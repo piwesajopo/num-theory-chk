@@ -34,7 +34,8 @@ func PrimeFactorization(n int) (pfs map[int]int) {
 
 	// Get the number of 2s that divide n
 	for n%2 == 0 {
-		if _, ok := pfs[2]; ok {
+		_, ok := pfs[2]
+		if ok {
 			pfs[2] += 1
 		} else {
 			pfs[2] = 1
@@ -47,7 +48,8 @@ func PrimeFactorization(n int) (pfs map[int]int) {
 	for i := 3; i*i <= n; i = i + 2 {
 		// while i divides n, append i and divide n
 		for n%i == 0 {
-			if _, ok := pfs[i]; ok {
+			_, ok := pfs[i]
+			if ok {
 				pfs[i] += 1
 			} else {
 				pfs[i] = 1
@@ -78,7 +80,7 @@ func NumberOfDivisors(n int) int {
 }
 
 /*
-TODO: Check if this is really a good optimization 
+TODO: Check if this is really a good optimization
       (probably not as good as when used on C)
 func IntPow(base, exp int) int {
 	result := 1
