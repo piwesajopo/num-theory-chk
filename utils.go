@@ -1,8 +1,8 @@
 package main
 
-func sumOfDigits(n int) int {
-	var s int = 0
-	var m, r int
+func sumOfDigits(n uint) uint {
+	var s uint = 0
+	var m, r uint
 	for r = n; r > 0; r = r / 10 {
 		m = r % 10
 		s = s + m
@@ -10,9 +10,9 @@ func sumOfDigits(n int) int {
 	return s
 }
 
-func sumOfDigitSquares(n int) int {
-	var s int = 0
-	var d, r int
+func sumOfDigitSquares(n uint) uint {
+	var s uint = 0
+	var d, r uint
 	for r = n; r > 0; r = r / 10 {
 		d = r % 10
 		s = s + d*d
@@ -29,8 +29,8 @@ func sumOfDigitSquares(n int) int {
 //
 //	key of map: prime
 //	value of map: prime exponents
-func PrimeFactorization(n int) (pfs map[int]int) {
-	pfs = make(map[int]int)
+func PrimeFactorization(n uint) (pfs map[uint]uint) {
+	pfs = make(map[uint]uint)
 
 	// Get the number of 2s that divide n
 	for n%2 == 0 {
@@ -45,7 +45,7 @@ func PrimeFactorization(n int) (pfs map[int]int) {
 
 	// n must be odd at this point. so we can skip one element
 	// (note i = i + 2)
-	for i := 3; i*i <= n; i = i + 2 {
+	for i := uint(3); i*i <= n; i = i + 2 {
 		// while i divides n, append i and divide n
 		for n%i == 0 {
 			_, ok := pfs[i]
@@ -68,10 +68,10 @@ func PrimeFactorization(n int) (pfs map[int]int) {
 }
 
 // Calculate number of divisors of a given number
-func NumberOfDivisors(n int) int {
+func NumberOfDivisors(n uint) uint {
 	pfs := PrimeFactorization(n)
 
-	num := 1
+	var num uint = 1
 	for _, exponents := range pfs {
 		num *= (exponents + 1)
 	}
@@ -99,8 +99,8 @@ func IntPow(base, exp int) int {
 }
 */
 
-func IntPow(base, exp int) int {
-	result := 1
+func IntPow(base, exp uint) uint {
+	var result uint = 1
 	for {
 		if exp%2 == 1 {
 			result *= base
@@ -117,10 +117,10 @@ func IntPow(base, exp int) int {
 
 // Adapted from https://siongui.github.io/2017/05/19/go-sum-of-proper-factors/
 // formula comes from https://math.stackexchange.com/a/22723
-func SumOfProperDivisors(n int) int {
+func SumOfProperDivisors(n uint) uint {
 	pfs := PrimeFactorization(n)
 
-	sumOfAllFactors := 1
+	var sumOfAllFactors uint = 1
 	for prime, exponents := range pfs {
 		sumOfAllFactors *= (IntPow(prime, exponents+1) - 1) / (prime - 1)
 	}

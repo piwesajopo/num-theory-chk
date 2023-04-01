@@ -5,17 +5,17 @@ import (
 	"math"
 )
 
-func self(n int) bool {
+func self(n uint) bool {
 
 	// Actually the number of digits - 1 (but that's what we want)
-	digits := int(math.Floor(math.Log10(float64(n))))
+	digits := uint(math.Floor(math.Log10(float64(n))))
 
-	maxD := digits * 9
+	var maxD uint = digits * 9
 
 	lowerBoundary := n - maxD
 
-	var checkX int
-	for number := lowerBoundary; number < n; number++ {
+	var checkX uint
+	for number := uint(lowerBoundary); number < n; number++ {
 		checkX = number + sumOfDigits(number)
 		if debug {
 			fmt.Printf("Checking for %d. Generated: %d\n", number, checkX)

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func happy(n int) bool {
+func happy(n uint) bool {
 	for i := 0; ; i++ {
 		n = sumOfDigitSquares(n)
 		if debug {

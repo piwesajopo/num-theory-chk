@@ -1,8 +1,8 @@
 package main
 
 // Returns true if the n is an odious number
-func odious(n int) bool {
-	var cnt int
+func odious(n uint) bool {
+	var cnt uint
 	// Notice we use n >> 1 here instead of n / 2
 	// It may seem it was done for performance
 	// but it's because it makes more sense given

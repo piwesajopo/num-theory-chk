@@ -23,7 +23,7 @@ func usage() {
 	flag.PrintDefaults()
 }
 
-func handleArgs() (int, error) {
+func handleArgs() (uint, error) {
 	args := os.Args
 
 	debugPtr := flag.Bool("debug", false, "Show Debug Info.")
@@ -33,13 +33,13 @@ func handleArgs() (int, error) {
 	// Check that at least one parameter has been provided.
 	if len(args) < 2 {
 		fmt.Println("Sintax: ", args[0], "[-debug] numberToCheck")
-		return -1, errors.New("missing parameter")
+		return 0, errors.New("missing parameter")
 	}
 
 	params := flag.Args()
 	if len(params) == 0 {
 		fmt.Println("Sintax: ", args[0], "[-debug] numberToCheck")
-		return -1, errors.New("missing parameter")
+		return 0, errors.New("missing parameter")
 	}
 
 	// Use flag.CommandLine.Parse to parse the remaining arguments.
@@ -53,14 +53,14 @@ func handleArgs() (int, error) {
 	if err != nil {
 		fmt.Println("Please specify a number.")
 		fmt.Println("Sintax: ", args[0], "[-debug] numberToCheck")
-		return -1, errors.New("missing parameter")
+		return 0, errors.New("missing parameter")
 	}
-	return n, nil
+	return uint(n), nil
 }
 
-type evalKind func(n int) bool
+type evalKind func(n uint) bool
 
-func testKind(kind string, number int, fn evalKind) {
+func testKind(kind string, number uint, fn evalKind) {
 	var article string
 	switch kind[0] {
 	case
