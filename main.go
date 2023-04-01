@@ -61,14 +61,24 @@ func handleArgs() (int, error) {
 type evalKind func(n int) bool
 
 func testKind(kind string, number int, fn evalKind) {
+	var article string
+	switch kind[0] {
+	case
+		'a', 'e', 'i', 'o', 'u',
+		'A', 'E', 'I', 'O', 'U':
+		article = "an"
+	default:
+		article = "a"
+	}
+
 	if debug {
-		fmt.Printf("Finding if %d is a %s number.\n", number, kind)
+		fmt.Printf("Finding if %d is %s %s number.\n", number, article, kind)
 	}
 
 	if fn(number) {
-		fmt.Printf("%d IS a %s number.\n", number, kind)
+		fmt.Printf("%d IS %s %s number.\n", number, article, kind)
 	} else {
-		fmt.Printf("%d IS NOT a %s number.\n", number, kind)
+		fmt.Printf("%d IS NOT %s %s number.\n", number, article, kind)
 	}
 }
 
