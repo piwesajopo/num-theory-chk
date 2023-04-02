@@ -26,7 +26,7 @@ A number properties checker based on easy to understand number theory algorithms
 
 #### Number Theory Numbners
 
-- **Fibonacci Number:** A quick method to check if a number if Fibonacci number or not, is as below: N is a Fibonacci number if and only if ( 5*N2 + 4 ) or ( 5*N2 – 4 ) is a perfect square! For Example: 3 is a Fibonacci number since (5*3*3 + 4) is 49 which is 7*7.
+- **Fibonacci Number:** A quick method to check if a number if Fibonacci number or not, is as below: N is a Fibonacci number if and only if `( 5*N^2 + 4 )` or `( 5*N^2 – 4 )` is a perfect square! For Example: 3 is a Fibonacci number since `(5*3*3 + 4)` is `49` which is `7*7`.
 
 - **Münchhausen Number:** A Münchhausen number (sometimes spelled Münchausen number, with a single 'h') is a number equal to the sum of its digits raised to each digit's power.
 
