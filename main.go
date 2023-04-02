@@ -91,18 +91,24 @@ func main() {
 	}
 
 	sumOfProperDiv := SumOfProperDivisors(number)
-	fmt.Println("Number", number, "has", NumberOfDivisors(number), "divisors.")
-	fmt.Println("Sum of proper divisors of", number, "is", sumOfProperDiv)
+	numDiv := NumberOfDivisors(number)
+	if numDiv == 2 {
+		fmt.Println(number, "is a prime number.")
+	} else {
+		fmt.Println(number, "has", numDiv, "divisors.")
+		fmt.Println("Sum of proper divisors of", number, "is", sumOfProperDiv)
+	}
 
 	if number == sumOfProperDiv {
-		fmt.Println("Number", number, "is a perfect number")
+		fmt.Println(number, "is a perfect number")
 	} else if number < sumOfProperDiv {
-		fmt.Println("Number", number,
+		fmt.Println(number,
 			"is an abundant number with an abundance of", sumOfProperDiv-number)
 	} else {
-		fmt.Println("Number", number,
+		fmt.Println(number,
 			"is an deficient number with an deficiency of", number-sumOfProperDiv)
 	}
+
 
 	testKind("perfect square", number, perfectSquare)
 	testKind("happy", number, happy)
