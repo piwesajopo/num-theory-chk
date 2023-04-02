@@ -114,4 +114,5 @@ func main() {
 	testKind("happy", number, happy)
 	testKind("self", number, self)
 	testKind("odious", number, odious)
+	testKind("fibonacci", number, fibonacci)
 }
