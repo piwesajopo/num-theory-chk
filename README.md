@@ -11,13 +11,13 @@ A number properties checker based on easy to understand number theory algorithms
 - Deficient Number
 - Perfect Square Number
 - Prime Number
+- Fibonacci Number
 <br>
 
 ## Pending Checks
 
 - Narcissistic or Armstrong number:
 - Münchhausen Number
-- Fibonacci Number
 - Semiperfect Number
 - Factorial Number
 <br>
