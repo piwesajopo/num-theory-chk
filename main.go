@@ -72,14 +72,14 @@ func testKind(kind string, number uint, fn evalKind) {
 	}
 
 	if debug {
-		fmt.Printf("Finding if %d is %s %s number.\n", number, article, kind)
+		fmt.Printf("Finding if %d is %s %s number\n", number, article, kind)
 	}
 
 	if fn(number) {
-		fmt.Printf("%d IS %s %s number.\n", number, article, kind)
+		fmt.Printf("%d is %s %s number\n", number, article, kind)
 	} else {
 		if debug {
-			fmt.Printf("%d IS NOT %s %s number.\n", number, article, kind)
+			fmt.Printf("%d IS NOT %s %s number\n", number, article, kind)
 		}
 	}
 }
@@ -93,9 +93,9 @@ func main() {
 	sumOfProperDiv := SumOfProperDivisors(number)
 	numDiv := NumberOfDivisors(number)
 	if numDiv == 2 {
-		fmt.Println(number, "is a prime number.")
+		fmt.Println(number, "is a prime number")
 	} else {
-		fmt.Println(number, "has", numDiv, "divisors.")
+		fmt.Println(number, "has", numDiv, "divisors")
 		fmt.Println("Sum of proper divisors of", number, "is", sumOfProperDiv)
 	}
 
@@ -108,7 +108,6 @@ func main() {
 		fmt.Println(number,
 			"is an deficient number with an deficiency of", number-sumOfProperDiv)
 	}
-
 
 	testKind("perfect square", number, perfectSquare)
 	testKind("happy", number, happy)
