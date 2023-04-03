@@ -109,6 +109,19 @@ func main() {
 			"is an deficient number with an deficiency of", number-sumOfProperDiv)
 	}
 
+	if debug {
+		fmt.Printf("Finding if %d is a Narcissistic number\n", number)
+	}
+
+	isNarcissistic, n := armstrong(number)
+	if isNarcissistic {
+		fmt.Printf("%d is a %d-Narcissistic number\n", number, n)
+	} else {
+		if debug {
+			fmt.Printf("%d IS NOT a %d-Narcissistic number\n", number, n)
+		}
+	}
+
 	testKind("perfect square", number, perfectSquare)
 	testKind("happy", number, happy)
 	testKind("self", number, self)

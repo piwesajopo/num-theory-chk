@@ -12,11 +12,11 @@ A number properties checker based on easy to understand number theory algorithms
 - Perfect Square Number
 - Prime Number
 - Fibonacci Number
+- Narcissistic Number
 <br>
 
 ## Pending Checks
 
-- Narcissistic or Armstrong number:
 - Münchhausen Number
 - Semiperfect Number
 - Factorial Number
@@ -41,3 +41,18 @@ A number properties checker based on easy to understand number theory algorithms
 
 - Bell Number
 - Catalan Number
+
+#### Some examples
+
+- Narcissistic:
+```
+153 = 1³ + 5³ + 3³
+
+1634 = 1⁴ + 6⁴ + 3⁴ + 4⁴
+
+54748 = 5⁵ + 4⁵ + 7⁵ + 4⁵ + 8⁵
+
+548834 = 5⁶ + 4⁶ + 8⁶ + 8⁶ + 3⁶ + 4⁶ (notable)
+
+1741725 = 1⁷ + 7⁷ + 4⁷ + 1⁷ + 7⁷ + 2⁷ + 5⁷
+```
