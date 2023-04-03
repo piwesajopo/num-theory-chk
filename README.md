@@ -13,13 +13,13 @@ A number properties checker based on easy to understand number theory algorithms
 - Prime Number
 - Fibonacci Number
 - Narcissistic Number
+- Münchhausen Number
+- Factorial Number
 <br>
 
 ## Pending Checks
 
-- Münchhausen Number
 - Semiperfect Number
-- Factorial Number
 <br>
 
 ## Some Definitions

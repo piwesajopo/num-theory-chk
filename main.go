@@ -127,5 +127,6 @@ func main() {
 	testKind("self", number, self)
 	testKind("odious", number, odious)
 	testKind("fibonacci", number, fibonacci)
-	testKind("Münchhausen", number, munchhausen)
+	testKind("münchhausen", number, munchhausen)
+	testKind("factorial", number, factorial)
 }
