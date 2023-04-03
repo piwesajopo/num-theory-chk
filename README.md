@@ -28,7 +28,7 @@ A number properties checker based on easy to understand number theory algorithms
 
 - **Fibonacci Number:** A quick method to check if a number if Fibonacci number or not, is as below: N is a Fibonacci number if and only if `( 5*N^2 + 4 )` or `( 5*N^2 – 4 )` is a perfect square! For Example: 3 is a Fibonacci number since `(5*3*3 + 4)` is `49` which is `7*7`.
 
-- **Münchhausen Number:** A Münchhausen number (sometimes spelled Münchausen number, with a single 'h') is a number equal to the sum of its digits raised to each digit's power.
+- **Münchhausen Number:** A Münchhausen number (sometimes spelled Münchausen number, with a single 'h') is a number equal to the sum of its digits raised to each digit's power. If 0s are disallowed (since 0^0 is not well-defined), the only Münchhausen numbers are 1 and `3435 = 3³ + 4⁴ + 3³ + 5⁵`. If the definition `0^0=0` is adopted, then there are exactly four Münchhausen numbers: `0`, `1`, `3435`, and `438579088`
 
 - **Narcissistic or Armstrong number:** An n-digit number that is the sum of the  nth powers of its digits is called an n-narcissistic number.
 
@@ -42,7 +42,7 @@ A number properties checker based on easy to understand number theory algorithms
 - Bell Number
 - Catalan Number
 
-#### Some examples
+## Some examples
 
 - Narcissistic:
 ```
@@ -56,3 +56,9 @@ A number properties checker based on easy to understand number theory algorithms
 
 1741725 = 1⁷ + 7⁷ + 4⁷ + 1⁷ + 7⁷ + 2⁷ + 5⁷
 ```
+
+- Münchhausen:
+```
+3435 = 3³ + 4⁴ + 3³ + 5⁵
+```
+
