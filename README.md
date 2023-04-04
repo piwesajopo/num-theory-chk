@@ -5,6 +5,16 @@ A number properties checker based on easy to understand number theory algorithms
 
 I recently became insterested in number theory, mainly because what I first saw as a funny and aesthetic way to mathematically represent numbers turned out to have practical applications. I soon realized this was a part of arithmetic that is not covered deeply on schools as it has to do with arithmetic functions.
 
+Hence came the idea of doing this repository, it serves several purposes:
+
+* Provides the code for a fun program that tells you the properties of a given number.
+* Teachs you about the concepts behind these properties (more documentation comming later).
+* Have easy to understand short functions that can be used to teach children and young people about programming logic and math.
+* Has some interesting extra programming easter eggs for beginners that were not really needed like:
+  - How to properly handle named parameters before and after non-named ones.
+  - Passing functions to be used inside other functions.
+  - Optimized Integer versions of some math operations like IntPower and *Interger Powers* and *Integer Square Roots* based on bitwise operations.
+
 ## Checks Performed
 
 - Happy Number
