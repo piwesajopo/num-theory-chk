@@ -1,6 +1,10 @@
 # num-theory-chk
 A number properties checker based on easy to understand number theory algorithms
 
+## Introduction
+
+I recently became insterested in number theory, mainly because what I first saw as a funny and aesthetic way to mathematically represent numbers turned out to have practical applications. I soon realized this was a part of arithmetic that is not covered deeply on schools as it has to do with arithmetic functions.
+
 ## Checks Performed
 
 - Happy Number
