@@ -29,12 +29,21 @@ Hence came the idea of doing this repository. It serves several purposes:
 - Narcissistic Number
 - Münchhausen Number
 - Factorial Number
+- Semiperfect Number
 <br>
 
 ## Pending Checks
 
-- Semiperfect Number
+All the initially proposed tests are now completed. However here are a few other that may be added later:
+- Pernicious Number
+- Gapful Number
+- Cake Number
 <br>
+
+## Uselful links:
+
+- [Numbers Aplenty](https://www.numbersaplenty.com)
+- [Number Empire](https://www.numberempire.com/)
 
 ## Definitions
 

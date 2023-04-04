@@ -129,4 +129,5 @@ func main() {
 	testKind("fibonacci", number, fibonacci)
 	testKind("münchhausen", number, munchhausen)
 	testKind("factorial", number, factorial)
+	testKind("semiperfect", number, semiperfect)
 }
