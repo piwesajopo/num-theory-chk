@@ -31,7 +31,7 @@ func sumOfDigitSquares(n uint) uint {
 //
 //	key of map: prime
 //	value of map: prime exponents
-func PrimeFactorization(n uint) (pfs map[uint]uint) {
+func primeFactorization(n uint) (pfs map[uint]uint) {
 	pfs = make(map[uint]uint)
 
 	// Get the number of 2s that divide n
@@ -70,8 +70,8 @@ func PrimeFactorization(n uint) (pfs map[uint]uint) {
 }
 
 // Calculate number of divisors of a given number
-func NumberOfDivisors(n uint) uint {
-	pfs := PrimeFactorization(n)
+func numberOfDivisors(n uint) uint {
+	pfs := primeFactorization(n)
 
 	var num uint = 1
 	for _, exponents := range pfs {
@@ -101,7 +101,7 @@ func IntPow(base, exp int) int {
 }
 */
 
-func IntPow(base, exp uint) uint {
+func intPow(base, exp uint) uint {
 	var result uint = 1
 	for {
 		if exp%2 == 1 {
@@ -140,12 +140,12 @@ func intSquare(n uint) uint {
 
 // Adapted from https://siongui.github.io/2017/05/19/go-sum-of-proper-factors/
 // formula comes from https://math.stackexchange.com/a/22723
-func SumOfProperDivisors(n uint) uint {
-	pfs := PrimeFactorization(n)
+func sumOfProperDivisors(n uint) uint {
+	pfs := primeFactorization(n)
 
 	var sumOfAllFactors uint = 1
 	for prime, exponents := range pfs {
-		sumOfAllFactors *= (IntPow(prime, exponents+1) - 1) / (prime - 1)
+		sumOfAllFactors *= (intPow(prime, exponents+1) - 1) / (prime - 1)
 	}
 	return sumOfAllFactors - n
 }

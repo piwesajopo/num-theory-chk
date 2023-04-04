@@ -90,8 +90,8 @@ func main() {
 		return
 	}
 
-	sumOfProperDiv := SumOfProperDivisors(number)
-	numDiv := NumberOfDivisors(number)
+	sumOfProperDiv := sumOfProperDivisors(number)
+	numDiv := numberOfDivisors(number)
 	if numDiv == 2 {
 		fmt.Println(number, "is a prime number")
 	} else {
@@ -129,5 +129,21 @@ func main() {
 	testKind("fibonacci", number, fibonacci)
 	testKind("münchhausen", number, munchhausen)
 	testKind("factorial", number, factorial)
-	testKind("semiperfect", number, semiperfect)
+
+	if debug {
+		fmt.Printf("Finding if %d is a Narcissistic number\n", number)
+	}
+	isSemiperfect, err := semiperfect(number)
+	if err != nil {
+		fmt.Println(number, err)
+		return
+	}
+
+	if isSemiperfect {
+		fmt.Printf("%d is a semiperfect number\n", number)
+	} else {
+		if debug {
+			fmt.Printf("%d IS NOT a semiperfect number\n", number)
+		}
+	}
 }

@@ -10,10 +10,10 @@ func armstrong(n uint) (isNarcissistic bool, power uint) {
 	var d, r uint
 	for r = n; r > 0; r = r / 10 {
 		d = r % 10
-		s = s + IntPow(d, c)
+		s = s + intPow(d, c)
 	}
 
 	isNarcissistic = s == n
-	power = c 
+	power = c
 	return
 }

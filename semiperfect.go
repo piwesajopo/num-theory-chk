@@ -1,5 +1,7 @@
 package main
 
+import "errors"
+
 // These functions are adapted from: https://www.geeksforgeeks.org/semiperfect-number/
 
 func sliceFactors(number uint) (factors []int) {
@@ -24,7 +26,12 @@ func sliceFactors(number uint) (factors []int) {
 	return
 }
 
-func semiperfect(n uint) bool {
+func semiperfect(n uint) (bool, error) {
+
+	if n > 33550336 {
+		return false, errors.New("too big for Semiperfect Test")
+	}
+
 	// This returns a slice of all the proper divisors
 	// Note: The returned slice is already sorted, which
 	//       is a pre-requisite for this code to work
@@ -63,5 +70,5 @@ func semiperfect(n uint) bool {
 
 	// If not possible to make the
 	// number by any combination of divisors
-	return subset[r-1][c-1]
+	return subset[r-1][c-1], nil
 }

@@ -6,7 +6,7 @@ func munchhausen(n uint) bool {
 	var d, r uint
 	for r = n; r > 0; r = r / 10 {
 		d = r % 10
-		s = s + IntPow(d, d)
+		s = s + intPow(d, d)
 	}
 	return s == n
 }
